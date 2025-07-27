@@ -1,0 +1,40 @@
+.barramenu {
+	background-color: transparent;
+	text-align: center;
+	position: relative;
+}
+
+.barra {
+	height: 85%;
+	float: left;
+	margin-left: 5px;
+	text-indent: 5px;
+	position: relative;
+	background-color: inherit;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+div#cerrarsesion {
+	height: 85%;
+	float: right;
+	width: 100px;
+	text-indent: 5px;
+	position: relative;
+	background-color: inherit;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: inherit;
+	margin-top: 2px;
+}
+
+a.menu {
+	color: #F7F7F7 ! important;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: courier, courier new, verdana, helvetica, serif;
+	font-size: 60% ! important;
+}

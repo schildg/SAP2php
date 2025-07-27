@@ -1,0 +1,16 @@
+<?php
+include_once('DATA_CONF.php');
+class ClaseObjeto extends SuperClase{
+	function ClaseObjeto() {
+		$this->CLASE_OBJETO='ClaseObjeto';
+	}
+	function leyenda() {
+		return $this->id;
+	}
+	function rotulo($campo) {
+		$Campo=array(@id_variable@
+                     );
+        return $Campo[$campo];
+	}
+};
+?>

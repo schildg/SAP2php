@@ -1,0 +1,23 @@
+<?php
+include_once ("Clases/ClaseObjeto.php");
+$smarty = new Smarty();
+$variaObjeto = new ClaseObjeto();
+$OBJETO = 'ClaseObjeto';
+$SUBOBJETO=$OBJETO;
+$CAMPOS = array(@id_cadena@);
+
+include_once ("datos-filtro.php");
+
+$smarty->assign("titulo", "Filtro de los datos del variaObjeto");
+
+$smarty->display('cabeceraListado.tpl');
+
+$smarty->display('FiltradorDeDatos.tpl');
+
+include_once ("datos-filtro-listador.php");
+
+$aClaseObjetos = $variaObjeto->FindAll($OBJETO,$QUERY_FILTRO,$ORDEN);
+$smarty->assign("listaObjetos", $aClaseObjetos);
+
+$smarty->display('ListadorDeDatos.tpl');
+?>

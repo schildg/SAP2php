@@ -1,0 +1,22 @@
+<?php
+include_once ("Clases/ClaseObjeto.php");
+$variaObjeto = new ClaseObjeto();
+
+$OBJETO='ClaseObjeto';
+$SUBOBJETO=$OBJETO;
+$CAMPOS = array(@id_cadena@);
+
+include_once ("datos-listador.php");
+
+$smarty->assign("objeto", $variaObjeto);
+
+$aClaseObjetos = $variaObjeto->FindAll($OBJETO,'',$ORDEN);
+
+$smarty->assign("listaObjetos", $aClaseObjetos);
+
+$smarty->assign("titulo", "Listado del ClaseObjeto");
+
+$smarty->display('cabeceraListado.tpl');
+
+$smarty->display('ListadorDeDatos.tpl');
+?>

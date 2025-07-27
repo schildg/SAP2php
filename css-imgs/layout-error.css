@@ -1,0 +1,112 @@
+/* content containers */
+#contab-middle-one-er,#contab-middle-two-er,#contab-middle-three-er {
+	font-size: 0.9em;
+	/* position: relative; */ /* relative to utilize z-index */
+	width: auto;
+	min-width: 120px;
+	margin: 10px;
+	z-index: 3; /* content can overlap when the browser is narrow */
+}
+
+#contab-middle-two-er,#contab-middle-three-er {
+	margin-left: 11em;
+	padding-left: 24px;
+}
+
+#contab-middle-three-er {
+	margin-right: 13em;
+	padding-right: 24px;
+}
+
+#contab-content-er {
+	padding: 24px;
+	border: 1px solid #aaa;
+	background-color: #cad4e9;
+}
+
+#contab-content-er>.contab-corner-bottom-er {
+	top: 0
+}
+
+.contab-corner-tl-er,.contab-corner-tr-er,.contab-corner-bl-er,.contab-corner-br-er
+	{
+	background-color: #d9d9d9;
+	position: relative;
+	width: 19px;
+	height: 19px;
+	/* The following line is to render PNGs with alpha transparency within IE/Win, using DirectX */
+	/* Work-around for IE6/Mac borkage (Part 1) */
+	display: none;
+}
+
+.contab-corner-tl-er,.contab-corner-bl-er {
+	float: left;
+	left: 0px;
+}
+
+.contab-corner-tr-er,.contab-corner-br-er {
+	float: right;
+	right: 0px;
+}
+
+.contab-corner-tl-er,.contab-corner-tr-er {
+	top: 0px;
+}
+
+.contab-corner-bl-er,.contab-corner-br-er {
+	bottom: 0px;
+	margin-top: -19px; /* Opera fix (part 1) */
+	top: -18px;
+}
+
+html>body .contab-corner-tl-er {
+	background: #d9d9d9 url("corner-tl-er.png") no-repeat left top;
+}
+
+html>body .contab-corner-tr-er {
+	background: #d9d9d9 url("corner-tr-er.png") no-repeat right top;
+}
+
+html>body .contab-corner-bl-er {
+	background: #d9d9d9 url("corner-bl-er.png") no-repeat left bottom;
+}
+
+html>body .contab-corner-br-er {
+	background: #d9d9d9 url("corner-br-er.png") no-repeat right bottom;
+}
+
+.contab-corner-tl-er {
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
+		'corner-tl-er.png', sizingMethod = 'scale' );
+}
+
+.contab-corner-tr-er {
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
+		'corner-tr-er.png', sizingMethod = 'scale' );
+}
+
+.contab-corner-br-er {
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
+		'corner-br-er.png', sizingMethod = 'scale' );
+}
+
+.contab-corner-bl-er {
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
+		'corner-bl-er.png', sizingMethod = 'scale' );
+}
+
+/* \*/
+.contab-corner-tl-er,.contab-corner-tr-er,.contab-corner-bl-er,.contab-corner-br-er
+	{
+	/* Restore the view for everything but IE6/Mac (part 2 of the "IE/Mac fix") */
+	display: block;
+}
+
+/* */
+.contab-corner-bl-er,.contab-corner-br-er {
+	top: 0px;
+}
+
+.content-er {
+	margin: 0 1em
+}

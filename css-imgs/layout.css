@@ -1,0 +1,483 @@
+body {
+	font-size: 0.9em;
+	font-family: bitstream vera sans, sans-serif;
+	margin: 0;
+	padding: 0;
+	/* (The background color is specified elsewhere, so do a global replacement if it ever changes) */
+	background-color: #d9d9d9;
+}
+
+img.ordenar {
+	height: 16px;
+	border: none;
+}
+
+img.iconos {
+	height: 48px;
+	border: none;
+}
+
+img.calendario {
+	height: 22px;
+	border: none;
+}
+
+img.calendario1 {
+	height: 16px;
+	border: none;
+}
+
+a:link {
+	color: #900;
+}
+
+a:visited {
+	color: #48468f;
+}
+
+a:hover {
+	color: #f20;
+}
+
+a[name] {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+#contab-herramienta {
+	/* position is offset by the header padding amount */
+	position: absolute;
+	right: 32px;
+	top: 110px;
+	text-align: right;
+	display: inline;
+}
+
+#contab-herramienta a {
+	color: #000;
+	text-decoration: none;
+	padding: 7pt;
+	font-size: 1em;
+}
+
+#contab-herramienta a:hover,#contab-header-search-button:hover {
+	color: #f20;
+	cursor: pointer;
+}
+
+#contab-herramienta img {
+	border: 0;
+	vertical-align: middle;
+	margin-right: 1px;
+	/*width: 36px;*/
+	height: 36px;
+}
+
+#contab-header {
+	background-color: #fff;
+	height: 62px;
+}
+
+#contab-header img {
+	border: 0;
+	vertical-align: middle;
+}
+
+#contab-header-logo {
+	/* position is offset by the header padding amount */
+	position: absolute;
+	left: 26px;
+	top: 13px;
+	z-index: 3;
+}
+
+#contab-header-logo img {
+	width: 110px;
+	height: 40px;
+}
+
+#contab-header-items {
+	/* position is offset by the header padding amount */
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	text-align: right;
+	display: inline;
+}
+
+#contab-header-items a {
+	color: #000;
+	text-decoration: none;
+	padding: 7pt;
+	font-size: 0.8em;
+}
+
+#contab-header-items a:hover,#contab-header-search-button:hover {
+	color: #f20;
+	cursor: pointer;
+}
+
+#contab-header-items img {
+	margin-right: 1px;
+	width: 36px;
+	height: 36px;
+}
+
+#contab-header-search {
+	height: 25px;
+}
+
+#contab-header-search-entry {
+	vertical-align: top;
+	margin: 0.65em 4px 0 10px;
+	padding: 2px 4px;
+	background-color: #f5f5f5;
+	border: 1px solid #999;
+	font-size: 0.8em !important;
+}
+
+#contab-header-search-entry:focus {
+	background-color: #fff;
+	border: 1px solid #555;
+}
+
+#contab-header-search-button {
+	font-size: 0.8em !important;
+	vertical-align: top;
+	margin-top: 0.2em;
+	border: 0;
+	padding: 7px;
+	background: #fff url('/images/header-search.png') no-repeat left;
+	padding-left: 21px;
+}
+
+#contab-header-items form {
+	float: right;
+}
+
+#contab-header-items input {
+	font-size: 0.85em;
+}
+
+#contab-nav {
+	margin: 0;
+	padding: 0;
+	background-color: #22437f;
+	font-size: 0;
+	height: 5px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+#contab-nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+#contab-nav li {
+	display: inline;
+	list-style: none;
+	padding: 0 5pt;
+}
+
+#contab-nav li+li {
+	padding-left: 8pt;
+	border-left: 1px solid #99a5bf;
+}
+
+#contab-nav a {
+	color: #c5ccdb;
+	text-decoration: none;
+}
+
+#contab-nav a:hover {
+	color: #fff;
+}
+
+#contab-side-left {
+	position: absolute;
+	z-index: 2;
+	width: 11em;
+	/* Space down for the approx line height (fonts) */
+	left: 12px;
+}
+
+#contab-side-right {
+	position: absolute;
+	z-index: 1;
+	width: 13em;
+	right: 12px;
+	padding-top: 3px;
+}
+
+#contab-side-left,#contab-side-right {
+	top: 2px;
+	/* add to the top margin to compensate for the fixed sizes */
+	margin-top: 75px;
+	color: #555;
+	font-size: 0.9em;
+}
+
+#contab-side-right ul {
+	list-style: square inside;
+	padding: 0;
+	margin: 0;
+}
+
+/* Left-side naviagation */
+#contab-side-nav-label {
+	display: none;
+}
+
+#contab-side-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #5976b2;
+	border-top: 0;
+	background-color: #22437f;
+}
+
+#contab-side-nav li {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #5976b2;
+	/* IE/Win gets upset if there is no bottom border... Go figure. */
+	border-bottom: 1px solid #22437f;
+}
+
+#contab-side-nav a {
+	margin: 0;
+	color: #c5ccdb;
+	display: block;
+	text-decoration: none;
+	padding: 4px 6px;
+}
+
+#contab-side-nav a:hover {
+	background-color: #34548f;
+	color: #fff;
+}
+
+#contab-side-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#contab-side-nav ul li {
+	border-top: 1px solid #34548e;
+	background-color: #34548e;
+	/* IE/Win gets upset if there is no bottom border... Go figure. */
+	border-bottom: 1px solid #34548e;
+}
+
+#contab-side-nav ul li:hover {
+	border-bottom: 1px solid #34548f;
+}
+
+#contab-side-nav ul li a {
+	padding-left: 12px;
+	color: #a7b2c9;
+}
+
+#contab-side-nav ul li a:hover {
+	background-color: #46659e;
+}
+
+#contab-side-nav ul ul li a {
+	padding-left: 18px;
+}
+
+#contab-side-nav strong a {
+	font-weight: normal;
+	color: #fff !important;
+	background-color: #10203b;
+}
+
+#contab-side-nav strong a:hover {
+	background-color: #172e56 !important;
+}
+
+/* content containers */
+#contab-middle-one,#contab-middle-two,#contab-middle-three {
+	font-size: 0.9em;
+	/* position: relative; */ /* relative to utilize z-index */
+	width: auto;
+	min-width: 120px;
+	margin: 10px;
+	z-index: 3; /* content can overlap when the browser is narrow */
+}
+
+#contab-middle-two,#contab-middle-three {
+	margin-left: 11em;
+	padding-left: 24px;
+}
+
+#contab-middle-three {
+	margin-right: 13em;
+	padding-right: 24px;
+}
+
+#contab-content {
+	padding: 24px;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	min-height: 350px;
+}
+
+#contab-content>.contab-corner-bottom {
+	top: 0
+}
+
+.contab-corner-tl,.contab-corner-tr,.contab-corner-bl,.contab-corner-br
+	{
+	background-color: #d9d9d9;
+	position: relative;
+	width: 19px;
+	height: 19px;
+	/* The following line is to render PNGs with alpha transparency within IE/Win, using DirectX */
+	/* Work-around for IE6/Mac borkage (Part 1) */
+	display: none;
+}
+
+.contab-corner-tl,.contab-corner-bl {
+	float: left;
+	left: 0px;
+}
+
+.contab-corner-tr,.contab-corner-br {
+	float: right;
+	right: 0px;
+}
+
+.contab-corner-tl,.contab-corner-tr {
+	top: 0px;
+}
+
+.contab-corner-bl,.contab-corner-br {
+	bottom: 0px;
+	margin-top: -19px; /* Opera fix (part 1) */
+	top: -18px;
+}
+
+html>body .contab-corner-tl {
+	background: #d9d9d9 url("corner-tl.png") no-repeat left top;
+}
+
+html>body .contab-corner-tr {
+	background: #d9d9d9 url("corner-tr.png") no-repeat right top;
+}
+
+html>body .contab-corner-bl {
+	background: #d9d9d9 url("corner-bl.png") no-repeat left bottom;
+}
+
+html>body .contab-corner-br {
+	background: #d9d9d9 url("corner-br.png") no-repeat right bottom;
+}
+
+.contab-corner-tl {
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
+		'corner-tl.png', sizingMethod = 'scale' );
+}
+
+.contab-corner-tr {
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
+		'corner-tr.png', sizingMethod = 'scale' );
+}
+
+.contab-corner-br {
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
+		'corner-br.png', sizingMethod = 'scale' );
+}
+
+.contab-corner-bl {
+	filter: progid : DXImageTransform.Microsoft.AlphaImageLoader ( src =
+		'corner-bl.png', sizingMethod = 'scale' );
+}
+
+/* \*/
+.contab-corner-tl,.contab-corner-tr,.contab-corner-bl,.contab-corner-br
+	{
+	/* Restore the view for everything but IE6/Mac (part 2 of the "IE/Mac fix") */
+	display: block;
+}
+
+/* */
+.contab-corner-bl,.contab-corner-br {
+	top: 0px;
+}
+
+.content {
+	margin: 0 1em
+}
+
+#contab-sidelist {
+	position: relative;
+	bottom: 3px;
+	margin: 0;
+	padding: 3px !important;
+	border: 1px solid #bbb;
+	background-color: #ccc;
+	border-radius: 2.5px;
+	-moz-border-radius: 2.5px;
+}
+
+#contab-sidelist strong a {
+	font-weight: normal;
+	background-color: #555;
+	color: #fff;
+}
+
+#contab-sidelist strong a:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+#contab-sidelist li {
+	list-style-position: outside;
+	font-size: 0.9em;
+	list-style: none;
+	border: 1px solid #ccc;
+	border-width: 1px 0;
+	padding: 0;
+	list-style: none;
+}
+
+#contab-sidelist li a {
+	text-decoration: none;
+	display: block;
+	padding: 6px 8px;
+	border-radius: 2.5px;
+	-moz-border-radius: 2.5px;
+}
+
+#contab-sidelist li a:hover {
+	background-color: #999;
+	color: #eee;
+}
+
+#contab-footer {
+	font-size: 0.75em;
+	text-align: center;
+	color: #777;
+	margin-bottom: 2em;
+}
+
+#contab-printable {
+	text-align: center;
+	margin: 1em 0;
+	font-size: 0.85em;
+}
+
+#contab-printable a {
+	text-decoration: none;
+	padding: 5px 0;
+	padding-left: 18px;
+	background: transparent url("css-imgs/printable.png") no-repeat left;
+}
+
+#contab-printable a:hover {
+	text-decoration: underline;
+}

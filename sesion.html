@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Sistema de Administracion</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" type="text/css" media="print"
+	href="css-imgs/print.css" />
+<style type="text/css" media="screen">
+@import url("css-imgs/layout.css");
+
+@import url("css-imgs/layout-error.css");
+
+@import url("css-imgs/content.css");
+
+@import url("css-imgs/tablas.css");
+
+@import url("jsc/calendar-yellow.css");
+</style>
+<script type="text/javascript" src="jsc/calendar.js"></script>
+
+<script type="text/javascript" src="overlibmws/ajaxcontentmws.js"></script>
+<script type="text/javascript" src="overlibmws/overlibmws.js"></script>
+<script type="text/javascript" src="jsc/lang/calendar-es.js"></script>
+<script type="text/javascript" src="jsc/calendar-setup.js"></script>
+
+
+<meta name="MSSmartTagsPreventParsing" content="TRUE" />
+
+<link rel="icon"  href="css-imgs/favicon.png"/>
+
+<script type="text/javascript" src="jsc/jquery.js"></script>
+<script type="text/javascript">
+	<!--//--><![CDATA[//><!--
+		$(document).ready(function() {
+			$("#contab-side-nav ul").each(function() {$(this).css("display", "none");});
+			$("#contab-side-nav .category").click(function() {
+				var childid = "#" + $(this).attr("childid");
+				if ($(childid).css("display") == "none") {$(childid).css("display", "block");}
+				else {$(childid).css("display", "none");}
+				if ($(this).hasClass("cat_close")) {$(this).removeClass("cat_close").addClass("cat_open");}
+				else{$(this).removeClass("cat_open").addClass("cat_close");}
+			});
+		});
+	//--><!]]>
+	</script>
+</head>
+
+<body>
+<!-- header BEGIN -->
+<div id="contab-header">
+<div id="contab-header-logo"><a href="<?php echo $_SERVER['PHP_SELF']; ?>"><img
+	src="css-imgs/cco.jpg" alt="Proyecto SAP2php" /></a> <lo><?php  include("manTitulo.php"); ?></lo>
+</div>
+<div id="contab-header-items"><span class="contab-header-icon">
+<a href="css-imgs/man.doc"><img src="css-imgs/header-faq.png"
+	alt=" " />FAQ</a> <?php  include("login.php"); ?> </span></div>
+
+</div>
+
+<div id="contab-nav"></div>
+<!-- header END -->
+
+<!-- leftside BEGIN -->
+<div id="contab-side-left">
+<div id="contab-side-nav-label">Site Navigation:</div>
+<ul id="contab-side-nav" class="menu">
+	<?php  include("manMenu.php"); ?>
+</ul>
+
+</div>
+
+<!-- leftside END -->
+
+
+<!-- content BEGIN -->
+<div id="contab-middle-two">
+<div class="contab-corner-tr">&nbsp;</div>
+<div class="contab-corner-tl">&nbsp;</div>
+<div id="contab-content"><?php  include("indice.php"); ?></div>
+
+<div class="contab-corner-br">&nbsp;</div>
+<div class="contab-corner-bl">&nbsp;</div>
+</div>
+<!-- content END -->
+
+<!-- error BEGIN -->
+<?php  include("error.php"); ?>
+<!-- error END -->
+
+<!-- footer BEGIN -->
+<div id="contab-footer">Copyright &copy; 2007-2014 Godofredo Hat,
+Inc. All rights reserved. <br />
+The Escuela Project is not a supported product of Godofredo Hat, Inc. <br />
+This page last modified at: 2012/03/03 13:41:29 <br />
+</div>
+<!-- footer END -->
+</body>
+</html>

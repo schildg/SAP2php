@@ -1,0 +1,77 @@
+table.lista a {
+	text-decoration: none;
+	color: #000000;
+}
+
+table.lista {
+	empty-cells: show;
+	border-color: #446688;
+	border-width: 1pt;
+	border-style: solid;
+	border-spacing: 0pt;
+	border-collapse: collapse;
+	font-size: 12px ! important;
+	background-color: #FAF0E6;
+	display: table;
+	font-family: verdana, helvetica, serif, courier, courier new;
+	width: 100%;
+}
+
+table.lista th {
+	background-color: #22437F;
+	font-size: 1em;
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
+	border-color: #446688;
+	border-width: 2pt;
+	border-style: ridge;
+}
+
+table.lista  tr {
+	height: 16px;
+	border-color: #446688;
+	border-width: 1pt;
+	border-style: solid;
+	padding: 0px;
+}
+
+table.lista  td {
+	height: 16px;
+	font-size: 1em;
+	border-color: #446688;
+	border-width: 1pt;
+	border-style: solid;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 1px;
+	padding-right: 2px;
+}
+
+table.campo-amb {
+	empty-cells: show;
+	text-align: left;
+	font-size: 12px ! important;
+	display: table;
+	font-family: verdana, helvetica, serif, courier, courier new;
+}
+
+table.campo-amb th {
+	font-size: 1em;
+	text-align: left;
+	font-weight: bold;
+}
+
+table.campo-amb  tr {
+	height: 16px;
+	padding: 0px;
+}
+
+table.campo-amb  td {
+	height: 16px;
+	font-size: 1em;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 1px;
+	padding-right: 2px;
+}
